@@ -1010,6 +1010,9 @@ print(f"Elapsed time: {elapsed_time}")
 dfIII
 
 
+
+write = lambda filename, text: open(filename, 'w').write(text)
+
 def feature_extraction(data_path,save_path,dictionnary,labels,pattern,batch_size) :
     # applying the pipeline
     file_counter = 0
@@ -1025,12 +1028,14 @@ def feature_extraction(data_path,save_path,dictionnary,labels,pattern,batch_size
             dataframe = clean_df(dataframe)
             dataframe = get_vars_names(dictionnary,dataframe)
             dataframe = refine_df(dataframe)
-        if file_counter % batch_size == 0 :
-          batch_num +=1 
-          dataframe.to_csv(f"df_{batch_num}.csv",index=False)
-        elif file_counter == 22154 : 
-          batch_num +=1
-          dataframe.to_csv(f"df_{batch_num}.csv",index=False)
+            write('file_count.txt',file_counter)
+            # testing batch size 
+            if file_counter % batch_size == 0 :
+              batch_num +=1 
+              dataframe.to_csv(f"df_{batch_num}.csv",index=False)
+            elif file_counter == 22154 : 
+              batch_num +=1
+              dataframe.to_csv(f"df_{batch_num}.csv",index=False)
 
     # saving dataframe as csv
     return dataframe
