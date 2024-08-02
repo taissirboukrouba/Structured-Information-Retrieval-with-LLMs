@@ -1012,12 +1012,22 @@ dfIII
 
 
 write = lambda filename, text: open(filename, 'w').write(text)
+is_file_empty = lambda filename: os.path.getsize(filename) == 0
+
 
 def feature_extraction(data_path,save_path,dictionnary,labels,pattern,batch_size) :
     # applying the pipeline
-    file_counter = 0
-    batch_num = 0
-    for root, directories, files in os.walk(data_path):
+    
+    if is_file_empty("batch_size.txt") : 
+      batch_num = 0
+      file_counter = 0
+    else : 
+      batch_num = int(read("batch_size.txt"))
+      file_counter = batch_num*1000
+    
+      for root, directories, files in os.walk(data_path):
+        if batch_num > 0 : 
+          files = files[batch_num*batch_size:]
         for filename in tqdm(files, desc="test full pipeline on files"):
             file_counter +=1
             filepath = os.path.join(root, filename)
@@ -1028,13 +1038,15 @@ def feature_extraction(data_path,save_path,dictionnary,labels,pattern,batch_size
             dataframe = clean_df(dataframe)
             dataframe = get_vars_names(dictionnary,dataframe)
             dataframe = refine_df(dataframe)
-            write('file_count.txt',file_counter)
+            write('file_count.txt',str(file_counter))
             # testing batch size 
             if file_counter % batch_size == 0 :
               batch_num +=1 
+              write('batch_size.txt',str(batch_num))
               dataframe.to_csv(f"df_{batch_num}.csv",index=False)
             elif file_counter == 22154 : 
               batch_num +=1
+              write('batch_size.txt',str(batch_num))
               dataframe.to_csv(f"df_{batch_num}.csv",index=False)
 
     # saving dataframe as csv
@@ -1045,6 +1057,7 @@ save_path = "dataset.csv"
 final_dict = {"sentence": [], "vars": [], "names": [] , "variable_position": []}
 labels = ["MATH_VAR","MATH_STRUCT", "MATH_SYMBOL" , "MATH_OPP" ,"MATH_VRB"]
 pattern = r'[,=]\s*(?![^()]*\))'
+batch_size = 1000
 
 # applying full pipeline on all data :
-df = feature_extraction(data_path,save_path,final_dict,labels,pattern)
+df = feature_extraction(data_path,save_path,final_dict,labels,pattern,batch_size)
