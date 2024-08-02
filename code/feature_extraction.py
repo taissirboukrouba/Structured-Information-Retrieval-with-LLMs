@@ -1010,12 +1010,13 @@ print(f"Elapsed time: {elapsed_time}")
 dfIII
 
 
-def feature_extraction(data_path,save_path,dictionnary,labels,pattern) :
+def feature_extraction(data_path,save_path,dictionnary,labels,pattern,batch_size) :
     # applying the pipeline
     file_counter = 0
+    batch_num = 0
     for root, directories, files in os.walk(data_path):
         for filename in tqdm(files, desc="test full pipeline on files"):
-            file_num =+1
+            file_counter +=1
             filepath = os.path.join(root, filename)
             # reading the text file
             text = read(filepath)
@@ -1024,8 +1025,9 @@ def feature_extraction(data_path,save_path,dictionnary,labels,pattern) :
             dataframe = clean_df(dataframe)
             dataframe = get_vars_names(dictionnary,dataframe)
             dataframe = refine_df(dataframe)
-          
-            dataframe.to_csv("df.csv",index=False)
+        if file_counter % batch_size == 0 :
+          batch_num +=1 
+          dataframe.to_csv(f"df_{batch_num}.csv",index=False)
     # saving dataframe as csv
     return dataframe
 
