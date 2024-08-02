@@ -1028,6 +1028,10 @@ def feature_extraction(data_path,save_path,dictionnary,labels,pattern,batch_size
         if file_counter % batch_size == 0 :
           batch_num +=1 
           dataframe.to_csv(f"df_{batch_num}.csv",index=False)
+        elif file_counter == 22154 : 
+          batch_num +=1
+          dataframe.to_csv(f"df_{batch_num}.csv",index=False)
+
     # saving dataframe as csv
     return dataframe
 
