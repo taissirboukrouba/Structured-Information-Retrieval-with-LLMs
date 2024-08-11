@@ -24,8 +24,8 @@ from nltk.corpus import wordnet as wn
 from tqdm import tqdm
 import os
 import warnings
-#nltk.download('punkt')
-#nltk.download('wordnet')
+nltk.download('punkt')
+nltk.download('wordnet')
 warnings.filterwarnings("ignore")
 
 """## I - Using Weak Labels :"""
@@ -852,7 +852,7 @@ def single_var(sent,labels,ent,tags,variables,names,word_list,dictionnary,dict_f
     variables,names,positions = var_middle(word_list,tags,var_idx,var,variables,names,positions)
     dict_func(dictionnary,sent,variables,names,positions)
 
-def multiple_vars(word_list,tags,var_idx,variables,names,dictionnary,dict_func,positions) :
+"""def multiple_vars(word_list,tags,var_idx,variables,names,dictionnary,dict_func,positions) :
   if word_list.count('and') == 2 & labels.count("MATH_VAR") ==2:
     # Getting the second "and" index
     last_index = len(word_list) - 1 - list(reversed(word_list)).index("and")
@@ -883,25 +883,23 @@ def multiple_vars(word_list,tags,var_idx,variables,names,dictionnary,dict_func,p
     variables.append([math_ents[0], math_ents[1]])
     positions.append("multiple")
 
-  dict_func(dictionnary,sent,variables,names,positions)
+  dict_func(dictionnary,sent,variables,names,positions)"""""
 
 def get_vars_names(dictionnary,dataframe) :
   for sent, ent, labels, tags in zip(dataframe["sentences"], dataframe["entities"], dataframe["labels"], dataframe["tags"]):
+    doc = custom_NER_tokenization(sent)
+    word_list = [token.text for token in doc]
+    variables = []
+    names = []
+    positions = []
     try : 
-      doc = custom_NER_tokenization(sent)
-      word_list = [token.text for token in doc]
-      variables = []
-      names = []
-      positions = []
-
       if 'MATH_VAR' in labels and 'and' not in word_list:
         single_var(sent,labels,ent,tags,variables,names,word_list,dictionnary,add_to_dict,positions)
+    except : 
+      continue
 
-      elif 'MATH_VAR' in labels and 'and' in word_list :
-        multiple_vars(word_list,tags,var_idx,variables,names,dictionnary,add_to_dict,positions)
-    
-    except Exception :
-      pass
+    #elif 'MATH_VAR' in labels and 'and' in word_list :
+    #  multiple_vars(word_list,tags,var_idx,variables,names,dictionnary,add_to_dict,positions)
 
   return pd.DataFrame(dictionnary)
 
@@ -911,62 +909,6 @@ labels = ["MATH_VAR","MATH_STRUCT", "MATH_SYMBOL" , "MATH_OPP" ,"MATH_VRB"]
 pattern = r'[,=]\s*(?![^()]*\))'
 my_dict = {"sentence": [], "vars": [], "names": [] , "variable_position": []}
 
-my_text2 = read("data/0001024v1.txt")
-print(my_text2[3000:4000])
-
-# pipeline
-# start timer
-start_time = datetime.now()
-df11 = create_df(my_text2,pattern,labels)
-add_tags(df11)
-df22 = clean_df(df11)
-df33 = get_vars_names(my_dict,df22)
-# end timer
-end_time = datetime.now()
-elapsed_time = end_time - start_time
-print(f"Elapsed time: {elapsed_time}")
-
-df33.tail(40)
-
-df33.iloc[11].names
-
-df33.tail(30)
-
-empty_cond = lambda x: len(x) == 0
-
-
-df_filtered = df33[~(df33['vars'].apply(empty_cond) & df33['names'].apply(empty_cond))]
-df_filtered
-
-my_text3 = read("data/0001001v1.txt")
-# pipeline
-# start timer
-start_time = datetime.now()
-dfI = create_df(my_text3,pattern,labels)
-add_tags(dfI)
-dfII = clean_df(dfI)
-dfIII = get_vars_names(my_dict,dfII)
-# end timer
-end_time = datetime.now()
-elapsed_time = end_time - start_time
-print(f"Elapsed time: {elapsed_time}")
-
-dfIII
-df_filtered = dfIII[~(dfIII['vars'].apply(empty_cond) & dfIII['names'].apply(empty_cond))]
-df_filtered
-
-
-
-for i,(name, var_pos) in enumerate(zip(df_filtered["names"], df_filtered["variable_position"])):
-    doc = nlp(name[0])
-    noun_phrases = [chunk.text for chunk in doc.noun_chunks]
-    if noun_phrases :
-        if var_pos[0] == "end" :
-            df_filtered["names"].iloc[i] = noun_phrases[-1]
-        elif var_pos[0] == "start" :
-            df_filtered["names"].iloc[i] = noun_phrases[0]
-
-df_filtered
 
 """# Data Refinement :"""
 
@@ -1010,54 +952,37 @@ print(f"Elapsed time: {elapsed_time}")
 dfIII
 
 
-
-write = lambda filename, text: open(filename, 'w').write(text)
-is_file_empty = lambda filename: os.path.getsize(filename) == 0
+write_text = lambda file_path, text: open(file_path, 'w').write(text)
 
 
-def feature_extraction(data_path,save_path,dictionnary,labels,pattern,batch_size) :
-    # applying the pipeline
-    
-    if is_file_empty("batch_size.txt") : 
-      batch_num = 0
-      file_counter = 0
-    else : 
-      batch_num = int(read("batch_size.txt"))
-      file_counter = batch_num*1000
-    
-      for root, directories, files in os.walk(data_path):
-        if batch_num > 0 : 
-          files = files[batch_num*batch_size:]
+def feature_extraction(data_path,save_path,dictionnary,labels,pattern) : 
+    # applying the pipeline 
+    for root, directories, files in os.walk(data_path):
         for filename in tqdm(files, desc="test full pipeline on files"):
-            file_counter +=1
-            filepath = os.path.join(root, filename)
-            # reading the text file
-            text = read(filepath)
-            dataframe = create_df(text,pattern,labels)
-            add_tags(dataframe)
-            dataframe = clean_df(dataframe)
-            dataframe = get_vars_names(dictionnary,dataframe)
-            dataframe = refine_df(dataframe)
-            write('file_count.txt',str(file_counter))
-            # testing batch size 
-            if file_counter % batch_size == 0 :
-              batch_num +=1 
-              write('batch_size.txt',str(batch_num))
-              dataframe.to_csv(f"df_{batch_num}.csv",index=False)
-            elif file_counter == 22154 : 
-              batch_num +=1
-              write('batch_size.txt',str(batch_num))
-              dataframe.to_csv(f"df_{batch_num}.csv",index=False)
+            try : 
+              filepath = os.path.join(root, filename)
+              # reading the text file 
+              text = read(filepath)
+              dataframe = create_df(text,pattern,labels)
+              add_tags(dataframe)
+              dataframe = clean_df(dataframe)
+              dataframe = get_vars_names(dictionnary,dataframe)
+              dataframe = refine_df(dataframe)
+              write_text("row_count.txt", str(len(dataframe)))  
+              dataframe.to_csv(save_path, encoding='utf-8', index=False)
+            except : 
+              continue 
+            
 
-    # saving dataframe as csv
-    return dataframe
 
-data_path = "data"
-save_path = "dataset.csv"
+    # saving dataframe as csv 
+    dataframe.to_csv(save_path, encoding='utf-8', index=False)
+
+data_path = "data/"
+save_path = "dataframe.csv"
 final_dict = {"sentence": [], "vars": [], "names": [] , "variable_position": []}
 labels = ["MATH_VAR","MATH_STRUCT", "MATH_SYMBOL" , "MATH_OPP" ,"MATH_VRB"]
 pattern = r'[,=]\s*(?![^()]*\))'
-batch_size = 1000
 
-# applying full pipeline on all data :
-df = feature_extraction(data_path,save_path,final_dict,labels,pattern,batch_size)
+# applying full pipeline on all data : 
+feature_extraction(data_path,save_path,final_dict,labels,pattern)
