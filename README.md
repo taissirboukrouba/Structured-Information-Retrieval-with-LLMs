@@ -37,10 +37,6 @@ The [UH policy](https://www.herts.ac.uk/research/research-management/ethics-and-
 
 Under [ArXiv’s terms and submission agreements](https://info.arxiv.org/help/policies/submission_agreement.html) “Grant of the License to arXiv” submitters agree that their submission grants us (content users) a non-exclusive, perpetual, irrevocable, and royalty-free license to include and use their work 
 
-## Background
-
-Describe the theoretical foundation, related work, or previous research that underpins your project. Explain why your work is important in the context of existing research.
-
 ## Installation
 
 Give instructions on how to install and set up your project. This could include:
@@ -60,7 +56,29 @@ pip install -r requirements.txt
 ## Methodology 
 
 ### I - Data Collection 
+The dataset is called [ArXiv](https://arxiv.org) from the website which is open access. The data was collected from Google Cloud Storage (GCS) where it was available for free in buckets for bulk Access. The command line tool [gsutil](https://cloud.google.com/storage/docs/gsutil) was used to access ArXive’s physics PDF buckets and downloaded into local machine. The dataset was then uploaded into Google Drive to be easily accessed through Google Collab. 
 ### II - Data Preparation
+This is the first step of the pipeline. The goal is to get from PDF data into text data. Since the files I have are native PDFs (which means text is already digitally encoded), there is no need to apply any OCR (Optical Character Recognition) techniques because it's less accurate and can lead to more grammatical errors. This means I will use **PyMuPDF**, **PyPDF2**, and **PDFMiner.six**. I will have two tests where the first test is general text extraction using one PDF file from the dataset. The pipeline is summarised in the following diagram : 
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/4bf99ea6-6b66-477d-bc48-0c921f6f8fbb" alt="data-preparation" width="800"/>
+</p>
+
+
+In terms of text parsing , PDFMiner.six had the best results with impressive formatting and absence of text spacing issues . Symbol detection was moderate but the best compared to the other tools. Also , when tested on the math notations it had moderate but acceptable performance. Since PYPDF2 spacing issue couldn't be fixed , PDFminer.six is the tool to be used for PDF translation into textual data. The following table will summarize the performances of the all three tools tested on the PDF sample and math notations : 
+<div align="center">
+
+|                   | **PyMuPDF**          | **PyPDF2**           | **PDFMiner.six**     |
+|-------------------|----------------------|----------------------|----------------------|
+| **Test I**        | Moderate             | Bad                  | Good                 |
+| **Test II**       | Bad                  | Good                 | Moderate             |
+| **Upsides**       | Moderate formatting  | Good symbol detection| Good formatting      |
+| **Downsides**     | Extremely bad symbol detection | Very bad formatting | Moderate symbol detection |
+| **Decision**      | Excluded           | Excluded           | Selected                 |
+
+</div>
+
+
 ### III - Data Preprocessing
 ### IV - Feature Extraction 
 ### V - Modelling
