@@ -17,7 +17,7 @@
 - [Discussion](#discussion)
 - [Contributing](#contributing)
 - [License](#license)
-- [Ethical Considerations](#ethical_considerations)
+- [Ethical Considerations](#ethical-considerations)
 - [References](#references)
 
 ---
