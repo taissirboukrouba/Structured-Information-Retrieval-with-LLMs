@@ -1,0 +1,22 @@
+{
+  "feedf_dim": 2048,
+  "id2label": {
+    "0": "O",
+    "1": "B-VAR",
+    "2": "B-NAME",
+    "3": "I-NAME"
+  },
+  "label2id": {
+    "B-NAME": 2,
+    "B-VAR": 1,
+    "I-NAME": 3,
+    "O": 0
+  },
+  "max_seq_len": 512,
+  "model_dim": 768,
+  "model_type": "seq_lab_transformer",
+  "num_heads": 8,
+  "num_layers": 6,
+  "transformers_version": "4.42.4",
+  "vocab_size": 30522
+}
