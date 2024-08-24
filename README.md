@@ -38,8 +38,9 @@ Knowing the importance of research papers and the huge amounts of its unstructur
 ## Document Control
 This project maintains a well-organized directory structure to ensure efficient document control and project management. The `/data` directory contains the final datasets from both iterations of the study. The `/documentation` folder holds comprehensive documentation detailing the methodology and steps undertaken. Saved models are stored in the `/models` directory, while the `/notebooks` folder includes Jupyter notebooks used throughout the project. Finally, the `/scripts` directory has the feature extraction script designed to be executed on a cluster for enhanced performance and time efficiency.
 
+
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/a2a60935-adb1-4923-ba65-37feac38f070" alt="doc-cntrl" width="800"/>
+  <img src="https://github.com/user-attachments/assets/b4c6b387-1741-4035-90a1-5c29ca0121f7" alt="doc-cntrl" width="700"/>
 </p>
 
 ## Installation
