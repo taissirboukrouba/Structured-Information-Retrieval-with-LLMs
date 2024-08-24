@@ -140,7 +140,18 @@ To transition into the modeling phase, we start with pre-modeling processing, a 
 1. [Pre-modelling processing](documentation/modelling/I%20-%20Pre-modelling%20Processing.md)
 2. [Model Selection](documentation/modelling/II%20-%20Model%20Selection.md) 
 
+All of the modelling pipeline parameters for both models is summarised in this table : 
+<div align="center">
 
+| **Parameter**          | **Value**                       | **Parameter**          | **Value**                     |
+|------------------------|---------------------------------|------------------------|-------------------------------|
+| **Save Directory**     | Custom to each model            | **Logging Steps**      | 100                           |
+| **Learning Rate**      | 2e-5                            | **Evaluation Strategy**| "epochs"                      |
+| **Epochs**             | 10 or 20                        | **Save Strategy**      | "epochs"                      |
+| **Steps**              | 100                             | **Per Device Batch**   | 16                            |
+| **Weight Decay**       | 0.01                            | **Early Stopping**     | Only for fine-tuned model     |
+
+</div>
 
 
 
