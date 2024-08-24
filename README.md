@@ -96,14 +96,14 @@ The initial phase involves processing the PDF documents, which have been convert
 
 Upon conversion of the PDF data into text format, it is crucial to undertake a thorough cleaning and validation process to ensure the integrity and accuracy of the text. This preprocessing phase is critical for preparing the data for further analysis and involves a series of methodical steps, which are outlined below:
 
-- **Regex Preprocessing**: This step involves applying regular expression-based techniques to systematically clean and normalize the text data. Regex preprocessing includes tasks such as removing unwanted characters, standardizing formats, and correcting common text extraction errors. This step is essential for ensuring that the text data adheres to a consistent format, which facilitates more accurate downstream processing.
+- **Regex Preprocessing:** Uses regular expressions to clean and standardize text, removing unwanted characters and fixing extraction errors for consistency.
+- **Text Reconstruction:** Reassembles and organizes text to correct formatting issues and restore readability, ensuring a coherent and well-structured corpus.
 
-- **Text Reconstruction**: After regex preprocessing, the next step is text reconstruction. This involves reassembling and organizing the text data to restore its logical structure and readability. Text reconstruction addresses issues such as fragmented sentences, misplaced line breaks, and inconsistencies in formatting. The goal is to produce a coherent and well-structured text corpus that accurately reflects the original content of the PDFs.
 
 These preprocessing procedures are designed to refine the raw text data and enhance its quality, thereby improving the reliability and effectiveness of subsequent analyses and applications.
 
 > [!IMPORTANT]  
-> For a more in-depth exploration , please refer to the following document
+> For a more in-depth exploration , please refer to the following [document](documentation/data_preprocessing.md)
 
 ### IV - Feature Extraction
 
