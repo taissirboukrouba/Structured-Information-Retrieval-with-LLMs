@@ -113,8 +113,9 @@ After meticulously transforming and cleaning the text data, we now move to a cru
 3. [Defining Custom NER](documentation/feature%20extraction/III%20-%20Defining%20Custom%20NER.md)
 4. Creating the DataFrame
 5. Adding POS Tags
-6. Extracting Variable-Name Couples
-7. Refining the Results
+6. Cleaning Dataframe
+7. Extracting Variable-Name Couples
+8. Refining the Results
 
 
 
