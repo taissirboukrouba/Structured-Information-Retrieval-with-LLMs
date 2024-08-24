@@ -19,7 +19,6 @@
     - [IV - Feature Extraction](#iv---feature-extraction)
     - [V - Modelling](#v---modelling)
 - [Results](#results)
-- [Discussion](#discussion)
 - [License](#license)
 - [References](#references)
 
