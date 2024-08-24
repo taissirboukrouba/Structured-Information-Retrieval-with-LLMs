@@ -120,7 +120,7 @@ After meticulously transforming and cleaning the text data, we now move to a cru
 > [!NOTE]  
 > The complete implementation for this phase is available and can be found in the notebooks folder [here](notebooks/feature_extraction.ipynb)
 
-Lastly , All of these previous steps are combined to create the full feature extraction pipeline. Also , due to the limited time and the long demanding process , i only created 2 iterations (versions) of the result's dataframe where : 
+Lastly , All of these previous steps are combined to create the full feature extraction pipeline. Also , due to the limited time and the long demanding process , i have only created two iterations (versions) of the result's dataframe which is summarised in the following table : 
 
 
 <div align="center">
