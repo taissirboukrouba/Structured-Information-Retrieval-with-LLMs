@@ -15,6 +15,8 @@ Upon conversion of the PDF data into text format, it is crucial to undertake a t
 
 - **Text Reconstruction**: After regex preprocessing, the next step is text reconstruction. This involves reassembling and organizing the text data to restore its logical structure and readability. Text reconstruction addresses issues such as fragmented sentences, misplaced line breaks, and inconsistencies in formatting. The goal is to produce a coherent and well-structured text corpus that accurately reflects the original content of the PDFs.
 
+> [!IMPORTANT]  
+> The data preprocessing pipeline is found in the [data preprocessing notebook](notebooks/data_preprocessing.ipynb) under the function's name `preprocess_text()`
 
 ## I - Regex Preprocessing : 
 
@@ -27,7 +29,7 @@ The original text might have a lot of additional information which is not releva
   <img src="https://github.com/user-attachments/assets/112994ca-bfc5-4ec5-9e5a-9d38bb34d41b" width="41%" alt="after-regex-I">
 </div>
 
-And this before and after removing the references seciton : 
+- And this before and after removing the references section : 
 <div align="center">
     <img src="https://github.com/user-attachments/assets/88b4cfde-517b-4c39-b297-badd92ae6b99" width="47%" alt="before-regex-II">
     <img src="https://github.com/user-attachments/assets/7d527da9-1c1e-4268-a2c8-89d9aed1ab4f" width="47%" alt="after-regex-II">
