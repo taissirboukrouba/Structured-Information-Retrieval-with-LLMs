@@ -134,6 +134,9 @@ Lastly , All of these previous steps are combined to create the full feature ext
 
 ### V - Modelling
 
+> [!NOTE]  
+> The complete implementation for this phase is available and can be found in the notebooks folder [here](notebooks/modelling.ipynb)
+
 To transition into the modeling phase, we start with pre-modeling processing, a critical step where the data undergoes thorough preparation and refinement before it gets pushed into the models. This ensures that the dataset is in the best possible condition, free from noise and ready for accurate analysis. Following this, we move into the model definition stage, where careful consideration is given to selecting the appropriate models. Specifically, this involves choosing a pre-trained model that can leverage existing knowledge and a custom model built from scratch, tailored to the specific nuances of our dataset. The architectures of these models are meticulously designed to effectively capture the underlying patterns and relationships, providing a robust foundation for subsequent training and evaluation. Therefore we have 2 steps in this phase : 
 
 1. [Pre-modelling processing](documentation/modelling/I%20-%20Pre-modelling%20Processing.md)
