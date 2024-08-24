@@ -58,6 +58,36 @@ pip install -r requirements.txt
 ```
 ## Computational Environment
 
+### I - Feature Extraction Phase - UHHPC Cluster : 
+
+For the feature extraction phase of this project, I utilized the University of Hertfordshire's cluster computing resources (UHHPC). The jobs were submitted using the **PBS** (Portable Batch System), which is a system designed to manage job scheduling on a computing cluster. The job for feature extraction was submitted under the name `feat-extract` using the `-N` flag, and it was queued in the main queue (`-q`). The job requested one node with 16 processors per node, with a maximum runtime of 168 hours (`-l`), equivalent to one week. Throughout execution, the text output and errors were logged in `output.log` and `error.log`, respectively. This can be summarised in the following table : 
+<div align="center">
+
+| **Resource**         | **Details**                                                      |
+|----------------------|------------------------------------------------------------------|
+| **System**           | UHHPC          |
+| **Job Scheduler**    | PBS                                       |
+| **Job Name**         | "feat-extract"                                 |
+| **Queue**            | Main queue                                     |
+| **Nodes Requested**  | 1                                                                |
+| **Processors/Node**  | 16                                                               |
+| **Max Time**         | 168 hours (1 week)                                               |
+</div>
+
+### II - Modeling Phase - Google Colab : 
+
+Given the limited time and the extensive computational demands of the task, I utilized Google Colab's A100 GPUs for the modeling phase. The A100 GPU is powered by NVIDIA’s Ampere architecture, featuring 40 GB of high-bandwidth memory (HBM2) and offering up to 312 teraflops of performance. This GPU provides a significant acceleration for deep learning tasks, making it well-suited for training large language models. This can be summarised in the following table : 
+<div align="center">
+
+| **Resource**         | **Details**                                                      |
+|----------------------|------------------------------------------------------------------|
+| **System**           | Google Colab                                                     |
+| **GPU Used**         | NVIDIA A100                                                      |
+| **GPU Architecture** | NVIDIA Ampere                                                    |
+| **GPU Memory**       | 40 GB High-Bandwidth Memory (HBM2)                               |
+| **Performance**      | Up to 312 Teraflops                                              |
+| **Use Case**         | Training large language models                                   |
+</div>
 
 
 ## Methodology 
