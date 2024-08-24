@@ -1,4 +1,4 @@
-<img width="481" alt="image" src="https://github.com/user-attachments/assets/b3fff50f-0a40-41d7-92f9-6ac0f5592bd8"># Structured Information Retrieval with LLMs
+# Structured Information Retrieval with LLMs
 
 - **Author(s):** Taissir Boukrouba
 - **Affiliation:** University of Hertfordshire   
@@ -7,9 +7,9 @@
 ---
 
 ## Table of Contents
-- [Document Control](#document-control)
 - [Project Overview](#project-overview)
 - [Ethical Considerations](#ethical-considerations)
+- [Document Control](#document-control)
 - [Installation](#installation)
 - [Computational Environment](#computational-environment)
 - [Methodology](#methodology)
@@ -23,11 +23,6 @@
 - [References](#references)
 
 ---
-## Document Control
-This project maintains a well-organized directory structure to ensure efficient document control and project management. The `/data` directory contains the final datasets from both iterations of the study. The `/documentation` folder holds comprehensive documentation detailing the methodology and steps undertaken. Saved models are stored in the `/models` directory, while the `/notebooks` folder includes Jupyter notebooks used throughout the project. Finally, the `/scripts` directory has the feature extraction script designed to be executed on a cluster for enhanced performance and time efficiency.
-
-
-<img width="481" alt="image" src="https://github.com/user-attachments/assets/fe307eae-4d21-4ccd-9551-8dd339a74cc8">
 
 ## Project Overview
 
@@ -39,6 +34,13 @@ Knowing the importance of research papers and the huge amounts of its unstructur
 - The [UH policy](https://www.herts.ac.uk/research/research-management/ethics-and-research-integrity) focuses on the integrity of the research itself, not necessarily the platform (ArXiv). This project does not violate any copyright infringements or data fabrication (all data uploaded to ArXiv is verified by its moderators). 
 
 - Under [ArXiv’s terms and submission agreements](https://info.arxiv.org/help/policies/submission_agreement.html) “Grant of the License to arXiv” submitters agree that their submission grants us (content users) a non-exclusive, perpetual, irrevocable, and royalty-free license to include and use their work 
+
+## Document Control
+This project maintains a well-organized directory structure to ensure efficient document control and project management. The `/data` directory contains the final datasets from both iterations of the study. The `/documentation` folder holds comprehensive documentation detailing the methodology and steps undertaken. Saved models are stored in the `/models` directory, while the `/notebooks` folder includes Jupyter notebooks used throughout the project. Finally, the `/scripts` directory has the feature extraction script designed to be executed on a cluster for enhanced performance and time efficiency.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a2a60935-adb1-4923-ba65-37feac38f070" alt="doc-cntrl" width="800"/>
+</p>
 
 ## Installation
 
