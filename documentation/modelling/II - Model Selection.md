@@ -33,6 +33,8 @@ The traditional transformer model consists of both an encoder and a decoder. How
 
 The encoder in this architecture operates through multiple layers of self-attention mechanisms and feed-forward neural networks, allowing it to capture complex dependencies within the input data. This design enables the model to learn the relationships between tokens in the sequence, making it well-suited for tasks such as identifying named entities, classifying parts of speech, or any other form of sequence labeling. The full selected architecture is defined in `SeqLabTransformer()` and summarised in the following table : 
 
+<div align="center">
+
 
 | **Parameter**   | **Value**                  |
 |-----------------|----------------------------|
@@ -42,3 +44,5 @@ The encoder in this architecture operates through multiple layers of self-attent
 | **num_layers**  | 6 encoder layers           |
 | **feedf_dim**   | 2048                       |
 
+
+</div>
