@@ -106,18 +106,32 @@ These preprocessing procedures are designed to refine the raw text data and enha
 > For a more in-depth exploration , please refer to the following document
 
 ### IV - Feature Extraction
+
 After meticulously transforming and cleaning the text data, we now move to a crucial phase in the data processing pipeline: the extraction of (variable, name) pairs from the documents. This phase is instrumental in structuring the data for meaningful analysis. To achieve accurate and reliable extraction, this phase is broken down into a series of 7 steps, each designed to systematically address different aspects of the data and ensure that the resulting pairs are both precise and relevant. The steps involved in this phase are as follows : 
 
 1. [Defining Weak Labels](documentation/feature%20extraction/I%20-%20Defining%20Weak%20Labels.md)
 2. [Defining Custom Tokenizer](documentation/feature%20extraction/I%20-%20Defining%20Custom%20Tokenizer.md)
 3. [Defining Custom NER](documentation/feature%20extraction/III%20-%20Defining%20Custom%20NER.md)
-4. Creating the DataFrame
-5. Adding POS Tags
-6. Cleaning Dataframe
-7. Extracting Variable-Name Couples
-8. Refining the Results
+4. [Creating the DataFrame](documentation/feature%20extraction/IV%20-%20Creating%20the%20Dataframe.md)
+5. [Adding POS Tags](documentation/feature%20extraction/V%20-%20Adding%20POS%20Tags.md)
+6. [Cleaning Dataframe](documentation/feature%20extraction/VI%20-%20Cleaning%20the%20Dataframe.md)
+7. [Extracting Variable-Name Couples](documentation/feature%20extraction/VII%20-%20Extracting%20Variable-Name%20Couples.md)
+8. [Refining the Results](documentation/feature%20extraction/VIII%20-%20Refining%20the%20Results.md)
+
+> [!NOTE]  
+> The complete implementation for this phase is available and can be found in the notebooks folder [here](notebooks/feature_extraction.ipynb)
+
+Lastly , All of these previous steps are combined to create the full feature extraction pipeline. Also due to the limited time and the long demanding process , i only created 2 iterations (versions) of the result's dataframe where : 
 
 
+<div align="center">
+
+| **Iteration**      | **Row Count** |
+|--------------------|---------------|
+| First Iteration    | 300           |
+| Second Iteration   | 2100          |
+
+</div>
 
 ### V - Modelling
 
