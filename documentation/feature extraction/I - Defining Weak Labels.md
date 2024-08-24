@@ -8,10 +8,11 @@ Specifically, the process involves defining regex patterns that are capable of d
 
 This approach not only enhances the efficiency of the annotation process but also ensures that the data is prepared for more refined analysis in later stages.
 
+> [!IMPORTANT]  
+> The Weak Labels definition is found in the [feature extraction notebook](notebooks/feature_extraction.ipynb)
 
 
-
-This regex expression defined in the [feature extraction notebook](notebooks/feature_extraction.ipynb)  assumes that a function's name (**func_name**) can consist of 1 to 3 characters maximum and that the variables inside (**func_var**) can be one or more. The function's name includes not only regular characters but also various mathematical symbols and characters. Due to limitations with LaTeX, these symbols are not fully represented in this document. For the complete code and details, please refer to the original code on GitHub.
+This regex expression assumes that a function's name (**func_name**) can consist of 1 to 3 characters maximum and that the variables inside (**func_var**) can be one or more. The function's name includes not only regular characters but also various mathematical symbols and characters. Due to limitations with LaTeX, these symbols are not fully represented in this document. For the complete code and details, please refer to the original code on GitHub.
 
 Examples of such functions include, but are not limited to, the following:
 
