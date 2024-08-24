@@ -88,7 +88,11 @@ In terms of text parsing , PDFMiner.six had the best results with impressive for
 > [!NOTE]  
 > The complete implementation for this phase is available and can be found in the notebooks folder [here](notebooks/data_preprocessing.ipynb)
 
-The initial phase involves processing the PDF documents, which have been converted into text files and subsequently organized into a designated directory. These text files will undergo a comprehensive preprocessing procedure detailed in the subsequent chapter.
+The initial phase involves processing the PDF documents, which have been converted into text files and subsequently organized into a designated directory. These text files will undergo a comprehensive preprocessing procedure as displayed in the following diagram : 
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/cc2f5b8f-2633-4c09-87cf-1420cfc24068" alt="data-preprocessing" width="800"/>
+</p>
 
 Upon conversion of the PDF data into text format, it is crucial to undertake a thorough cleaning and validation process to ensure the integrity and accuracy of the text. This preprocessing phase is critical for preparing the data for further analysis and involves a series of methodical steps, which are outlined below:
 
