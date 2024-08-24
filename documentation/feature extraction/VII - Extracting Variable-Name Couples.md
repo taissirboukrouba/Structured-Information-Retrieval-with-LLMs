@@ -83,3 +83,10 @@ If a sub-sentence contains more than one token labeled as `MATH_VAR`, it indicat
 
 The following diagram and code section provide a detailed explanation of these processes and illustrate how the extraction is performed. Please refer to the visual aids and code examples below for a comprehensive understanding.
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/7caccfeb-b00d-4e9d-8c41-49e07adc24c5" alt="mult-var-diag" width="700"/>
+</p>
+
+
+
+
