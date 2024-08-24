@@ -20,3 +20,27 @@ Upon conversion of the PDF data into text format, it is crucial to undertake a t
 
 The original text might have a lot of additional information which is not relevant in  this use case. This explains it being the first steps which includes the use of regex expressions to clean the textual data. This eventually is removing references , page numbers , URLs and in-text references. 
 
+**Example :** The following figures will show the changes with an image before regex preprocessing (on the left) and after the preprocessing (on the right) : 
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/5831ef26-4e9c-4b15-8b09-9b5561759b7e" width="47%" alt="before-regex-I">
+  <img src="https://github.com/user-attachments/assets/112994ca-bfc5-4ec5-9e5a-9d38bb34d41b" width="41%" alt="after-regex-I">
+</div>
+
+And this before and after removing the references seciton : 
+<div align="center">
+    <img src="https://github.com/user-attachments/assets/88b4cfde-517b-4c39-b297-badd92ae6b99" width="47%" alt="before-regex-II">
+    <img src="https://github.com/user-attachments/assets/7d527da9-1c1e-4268-a2c8-89d9aed1ab4f" width="47%" alt="after-regex-II">
+</div>
+
+## II - Text Reconstruction : 
+
+The original text might have unnecessary line skips and that is because the text extraction tools failed to get the right format of the document. This happens usually when there is use of mathematical equations that do no conform with the text encoding defined in the text extraction tool. To solve this problem , i use SpaCy to tokenize the text into sentence tokens and i replace every line skip in each sentence with a space and add the cleaned sentences into a list. Then i join the collection of these sentences with line skips again to get a better format of the original document. 
+
+**Example :** The following figures will show the changes with an image before text reconstruction (on the left) and after the reconstruction (on the right) : 
+
+<div align="center">
+    <img src="https://github.com/user-attachments/assets/3b4d56ff-e142-4ac1-af74-92e79d8b5822" width="47%" alt="before-text-reconst">
+    <img src="https://github.com/user-attachments/assets/4e4c9731-5665-4f9d-90d5-ed93d28e03bd" width="47%" alt="after-text-reconst">
+</div>
+
