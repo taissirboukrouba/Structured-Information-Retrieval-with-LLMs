@@ -153,15 +153,51 @@ All of the modelling pipeline parameters for both models is summarised in this t
 
 </div>
 
-
-
-
-
 ## Results 
+
+![loss](https://github.com/user-attachments/assets/c10d65d5-f1c2-4d1c-9cfc-694acb8f97d3)
+![accuracy](https://github.com/user-attachments/assets/4759fe19-86dd-4a92-8b41-c0f1d13c8413)
+
+
+The graphs show the evolution of loss and accuracy for both defined models (DistillBERT and Custom Transformer) across two dataset versions (Iteration 1 and Iteration 2). Overall, the DistillBERT model demonstrates superior performance compared to the Custom Transformer, which is notably slower in both iterations, exhibiting lower accuracy and higher loss.
+
+In particular, the loss graph indicates that DistillBERT in the first iteration starts with a higher loss close to 100%, which decreases rapidly and then levels off after approximately 5 epochs. It then begins to increase steadily after the 8th epoch, eventually reaching a loss of 55%. In contrast, both Custom Transformer curves show more stability. The second iteration of the Custom Transformer displays about 5% more loss compared to the first iteration, ending at 78% and 65% loss, respectively. Conversely, the second iteration of DistillBERT starts with the lowest loss at 45%, which drops to below 30% after the third epoch, stabilizes, and fluctuates until reaching a minimal loss of 30% again.
+
+For the accuracy graph, which reflects the loss, it is evident that the model with the least loss achieved the highest accuracy of approximately 94% (DistillBERT II), with a 96% F1-score for detecting variables and around 66% F1-score for name extraction. DistillBERT I follows with 87% accuracy, while the Custom Transformers (Iteration 2 and Iteration 1) achieve 69% and 65% accuracy, respectively. 
+
+Both successfully fine-tuned models were tested on a couple of sentences with the following results:
+
+### Example 1
+*Sentence:* _The electric potential energy f(x)_
+
+| **Token**    | **Prediction** | **DistillBERT I** |
+|--------------|----------------|-------------------|
+| the          | B-NAME         | 0.96              |
+| electric      | I-NAME         | 0.49              |
+| potential     | I-NAME         | 0.73              |
+| energy        | I-NAME         | 0.86              |
+| f(x)          | B-VAR          | 0.96              |
+
+*Figure: Predictions Example I*
+
+### Example 2
+*Sentence:* _The velocity v_
+
+| **Token**    | **Prediction** | **DistillBERT I** | **DistillBERT II** |
+|--------------|----------------|-------------------|--------------------|
+| the          | B-NAME         | 0.96              | 0.99               |
+| velocity      | I-NAME         | 0.87              | 0.98               |
+| v            | B-VAR          | 0.98              | 0.99               |
+
+*Figure: Predictions Example II*
+
+
 ## Discussion
 ## References
 
 ## License
+
+
 
 
 
