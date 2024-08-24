@@ -154,12 +154,13 @@ All of the modelling pipeline parameters for both models is summarised in this t
 </div>
 
 ## Results 
-
-![loss](https://github.com/user-attachments/assets/c10d65d5-f1c2-4d1c-9cfc-694acb8f97d3)
-![accuracy](https://github.com/user-attachments/assets/4759fe19-86dd-4a92-8b41-c0f1d13c8413)
-
-
 The graphs show the evolution of loss and accuracy for both defined models (DistillBERT and Custom Transformer) across two dataset versions (Iteration 1 and Iteration 2). Overall, the DistillBERT model demonstrates superior performance compared to the Custom Transformer, which is notably slower in both iterations, exhibiting lower accuracy and higher loss.
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/c10d65d5-f1c2-4d1c-9cfc-694acb8f97d3" width="47.5%" alt="loss">
+  <img src="https://github.com/user-attachments/assets/4759fe19-86dd-4a92-8b41-c0f1d13c8413" width="48%" alt="POS Case of 'a'">
+</div>
+
 
 In particular, the loss graph indicates that DistillBERT in the first iteration starts with a higher loss close to 100%, which decreases rapidly and then levels off after approximately 5 epochs. It then begins to increase steadily after the 8th epoch, eventually reaching a loss of 55%. In contrast, both Custom Transformer curves show more stability. The second iteration of the Custom Transformer displays about 5% more loss compared to the first iteration, ending at 78% and 65% loss, respectively. Conversely, the second iteration of DistillBERT starts with the lowest loss at 45%, which drops to below 30% after the third epoch, stabilizes, and fluctuates until reaching a minimal loss of 30% again.
 
@@ -169,6 +170,7 @@ Both successfully fine-tuned models were tested on a couple of sentences with th
 
 ### Example 1
 *Sentence:* _The electric potential energy f(x)_
+<div align="center">
 
 | **Token**    | **Prediction** | **DistillBERT I** |
 |--------------|----------------|-------------------|
@@ -178,10 +180,11 @@ Both successfully fine-tuned models were tested on a couple of sentences with th
 | energy        | I-NAME         | 0.86              |
 | f(x)          | B-VAR          | 0.96              |
 
-*Figure: Predictions Example I*
+</div>
 
 ### Example 2
 *Sentence:* _The velocity v_
+<div align="center">
 
 | **Token**    | **Prediction** | **DistillBERT I** | **DistillBERT II** |
 |--------------|----------------|-------------------|--------------------|
@@ -190,9 +193,8 @@ Both successfully fine-tuned models were tested on a couple of sentences with th
 | v            | B-VAR          | 0.98              | 0.99               |
 
 *Figure: Predictions Example II*
+</div>
 
-
-## Discussion
 ## References
 
 ## License
