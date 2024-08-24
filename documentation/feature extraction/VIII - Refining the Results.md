@@ -8,6 +8,10 @@ Here’s how this process works:
 - **Noun Chunks Extraction:** The `.noun_chunks` method is used to identify and extract noun phrases from the text. This method segments a sentence into meaningful chunks, focusing on the noun parts of the phrases.
 - **Variable Position Alignment:** By leveraging the column that indicates the position of variables within the text, the correct noun sub-phrase corresponding to each variable's name is selected. This alignment ensures that each variable name is accurately identified and isolated from unrelated words.
 
+> [!IMPORTANT]  
+> The dataframe refinement pipeline is found in the [feature extraction notebook](notebooks/feature_extraction.ipynb) under the function's name `refine_df()`
+
+
 The following diagram and code provide a more detailed explanation of this refinement process, illustrating how noun chunks are utilized to improve the accuracy of variable extraction : 
 
 
