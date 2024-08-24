@@ -17,7 +17,8 @@ Following the cleaning of the dataframe, I will now define a function to extract
 -  **Multiple Variable Sentences:**
    This category includes sentences with two or more variables. For simplicity, the focus is on sentences with exactly two variables separated by "and". 
 
-
+> [!IMPORTANT]  
+> The variable extraction pipeline is found in the [feature extraction notebook](notebooks/feature_extraction.ipynb) under the function's name `get_vars_names()`
 
 ## Single Variable Sentences : 
 
@@ -88,5 +89,7 @@ The following diagram and code section provide a detailed explanation of these p
 </p>
 
 
+
+> All of these cases of variables were combined into one function that would be part of the full feature extraction pipeline 
 
 
