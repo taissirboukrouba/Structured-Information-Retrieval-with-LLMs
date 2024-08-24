@@ -105,7 +105,19 @@ These preprocessing procedures are designed to refine the raw text data and enha
 > [!IMPORTANT]  
 > For a more in-depth exploration , please refer to the following document
 
-### IV - Feature Extraction 
+### IV - Feature Extraction
+After meticulously transforming and cleaning the text data, we now move to a crucial phase in the data processing pipeline: the extraction of (variable, name) pairs from the documents. This phase is instrumental in structuring the data for meaningful analysis. To achieve accurate and reliable extraction, this phase is broken down into a series of 7 steps, each designed to systematically address different aspects of the data and ensure that the resulting pairs are both precise and relevant. The steps involved in this phase are as follows : 
+
+1. Defining Weak Labels
+2. Defining Custom Tokenizer
+3. Defining Custom NER
+4. Creating the DataFrame
+5. Adding POS Tags
+6. Extracting Variable-Name Couples
+7. Refining the Results
+
+
+
 ### V - Modelling
 
 
