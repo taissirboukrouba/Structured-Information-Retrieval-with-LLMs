@@ -1,5 +1,7 @@
 # Pre-modelling Processing 
 
+> [!IMPORTANT]  
+> The pre-modelling process pipeline is found in the [modelling notebook](notebooks/modelling.ipynb) under the function's `label_mapper()` and `PersonalisedEncoding()`
 
 ## I - Result data preprocessing : 
 
