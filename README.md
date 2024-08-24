@@ -198,6 +198,34 @@ Both successfully fine-tuned models were tested on a couple of sentences with th
 </div>
 
 ## References
+1. **Battiston, Federico**, Musciotto, Federico, Wang, Dashun, Barabási, Albert-László, Szell, Michael, Sinatra, Roberta. (2019). *Taking census of Physics*. Nature Reviews Physics, 1(1), 89--97. [https://doi.org/10.1038/s42254-018-0005-3](https://doi.org/10.1038/s42254-018-0005-3)
+
+2. **Mayer-Schönberger, Viktor**, Cukier, Kenneth. (2013). *Big Data: A Revolution that Will Transform How We Live, Work, and Think*. Houghton Mifflin Harcourt.
+
+3. **Sedlakova, Jana**, Daniore, Paola, Wintsch, Andrea Horn, Wolf, Markus, Stanikic, Mina, Haag, Christina, Sieber, Chloé, Schneider, Gerold, Staub, Kaspar, Ettlin, Dominik Alois, Grübner, Oliver, Rinaldi, Fabio, Von Wyl, Viktor. (2023). *Challenges and best practices for digital unstructured data enrichment in health research: A systematic narrative review*. PLOS Digital Health, 2(10), e0000347. [https://doi.org/10.1371/journal.pdig.0000347](https://doi.org/10.1371/journal.pdig.0000347)
+
+4. **Swain, Matthew C.**, Cole, Jacqueline M. (2016). *ChemDataExtractor: A Toolkit for Automated Extraction of Chemical Information from the Scientific Literature*. Journal of Chemical Information and Modeling, 56(10), 1894--1904. [https://doi.org/10.1021/acs.jcim.6b00207](https://doi.org/10.1021/acs.jcim.6b00207)
+
+5. **Weston, L., Tshitoyan, V., Dagdelen, J., Kononova, O., Trewartha, A., Persson, K. A., Ceder, G., Jain, A.** (2019). *Named Entity Recognition and Normalization Applied to Large-Scale Information Extraction from the Materials Science Literature*. Journal of Chemical Information and Modeling, 59(9), 3692--3702. [https://doi.org/10.1021/acs.jcim.9b00470](https://doi.org/10.1021/acs.jcim.9b00470)
+
+6. **Kononova, Olga**, Huo, Haoyan, He, Tanjin, Rong, Ziqin, Botari, Tiago, Sun, Wenhao, Tshitoyan, Vahe, Ceder, Gerbrand. (2019). *Text-mined dataset of inorganic materials synthesis recipes*. Scientific Data, 6(1). [https://www.nature.com/articles/s41597-019-0224-1](https://www.nature.com/articles/s41597-019-0224-1)
+
+7. **Dagdelen, John**, Dunn, Alexander, Lee, Sanghoon, Walker, Nicholas, Rosen, Andrew S., Ceder, Gerbrand, Persson, Kristin A., Jain, Anubhav. (2024). *Structured information extraction from scientific text with large language models*. Nature Communications, 15(1). [https://doi.org/10.1038/s41467-024-45563-x](https://doi.org/10.1038/s41467-024-45563-x)
+
+8. **Brockmeier, Erica K.** (2020). *Where math meets physics*. [https://penntoday.upenn.edu/news/where-math-meets-physics](https://penntoday.upenn.edu/news/where-math-meets-physics)
+
+9. **Liu, Yiheng**, He, Hao, Han, Tianle, Zhang, Xu, Liu, Mengyuan, Tian, Jiaming, Zhang, Yutong, Wang, Jiaqi, Gao, Xiaohui, Zhong, Tianyang, Pan, Yi, Xu, Shaochen, Wu, Zihao, Liu, Zhengliang, Zhang, Shu, Hu, Xintao, Zhang, Ning, Qiang, Tianming, Liu, Bao, Ge. (2024). *Understanding LLMs: A Comprehensive Overview from Training to Inference*. [https://arxiv.org/abs/2401.02038](https://arxiv.org/abs/2401.02038)
+
+10. **Zhao, Wayne Xin**, Zhou, Kun, Li, Junyi, Tang, Tianyi, Wang, Xiaolei, Hou, Yupeng, Min, Yingqian, Zhang, Beichen, Zhang, Junjie, Dong, Zican, Du, Yifan, Li, Xin, Tang, Zikang, Liu, Peiyu, Nie, Jian-Yun, Wen, Ji-Rong. (2023). *A survey of large language models*. arXiv (Cornell University). [https://arxiv.org/abs/2303.18223](https://arxiv.org/abs/2303.18223)
+
+11. **Raffel, Colin**, Shazeer, Noam, Roberts, Adam, Lee, Katherine, Narang, Sharan, Matena, Michael, Zhou, Yanqi, Li, Wei, Liu, Peter J. (2019). *Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer*. arXiv (Cornell University). [https://arxiv.org/abs/1910.10683](https://arxiv.org/abs/1910.10683)
+
+12. **Brown, Tom B.**, Mann, Benjamin, Ryder, Nick, Subbiah, Melanie, Kaplan, Jared, Dhariwal, Prafulla, Neelakantan, Arvind, Shyam, Pranav, Sastry, Girish, Askell, Amanda, Agarwal, Sandhini, Herbert-Voss, Ariel, Krueger, Gretchen, Henighan, Tom, Child, Rewon, Ramesh, Aditya, Ziegler, Daniel M., Wu, Jeffrey, Winter, Clemens, Hesse, Christopher, Chen, Mark, Sigler, Eric, Litwin, Mateusz, Gray, Scott, Chess, Benjamin, Clark, Jack, Berner, Christopher, McCandlish, Sam, Radford, Alec, Sutskever, Ilya, Amodei, Dario. (2020). *Language Models are Few-Shot Learners*. arXiv (Cornell University). [https://arxiv.org/abs/2005.14165](https://arxiv.org/abs/2005.14165)
+
+13. **Ren, Xiaozhe**, Zhou, Pingyi, Meng, Xinfan, Huang, Xinjing, Wang, Yadao, Wang, Weichao, Li, Pengfei, Zhang, Xiaoda, Podolskiy, Alexander, Arshinov, Grigory, Bout, Andrey, Piontkovskaya, Irina, Wei, Jiansheng, Jiang, Xin, Su, Teng, Liu, Qun, Yao, Jun. (2023). *PanGu: Towards Trillion Parameter Language Model with Sparse Heterogeneous Computing*. arXiv (Cornell University). [https://arxiv.org/abs/2303.10845](https://arxiv.org/abs/2303.10845)
+
+14. **Vaswani, Ashish**, Shazeer, Noam, Parmar, Niki, Uszkoreit, Jakob, Jones, Llion, Gomez, Aidan N., Kaiser, Lukasz, Polosukhin, Illia. (2017). *Attention is All You Need*. arXiv (Cornell University). [https://arxiv.org/abs/1706.03762](https://arxiv.org/abs/1706.03762)
+
 
 ## License
 
