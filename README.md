@@ -168,28 +168,31 @@ For the accuracy graph, which reflects the loss, it is evident that the model wi
 Both successfully fine-tuned models were tested on a couple of sentences with the following results:
 
 ### Example 1
-*Sentence:* _The electric potential energy f(x)_
+
+<p align="center" style="font-size:18px;"><i>"The electric potential energy f(x)"</i></p>
+
 <div align="center">
 
 | **Token**    | **Prediction** | **DistillBERT I** |
 |--------------|----------------|-------------------|
-| the          | B-NAME         | 0.96              |
-| electric      | I-NAME         | 0.49              |
-| potential     | I-NAME         | 0.73              |
-| energy        | I-NAME         | 0.86              |
-| f(x)          | B-VAR          | 0.96              |
+| `the`          | B-NAME         | 0.96              |
+| `electric`      | I-NAME         | 0.49              |
+| `potential`     | I-NAME         | 0.73              |
+| `energy`        | I-NAME         | 0.86              |
+| `f(x)`          | B-VAR          | 0.96              |
 
 </div>
 
 ### Example 2
-*Sentence:* _The velocity v_
+<p align="center" style="font-size:18px;"><i>"The velocity v"</i></p>
+
 <div align="center">
 
 | **Token**    | **Prediction** | **DistillBERT I** | **DistillBERT II** |
 |--------------|----------------|-------------------|--------------------|
-| the          | B-NAME         | 0.96              | 0.99               |
-| velocity      | I-NAME         | 0.87              | 0.98               |
-| v            | B-VAR          | 0.98              | 0.99               |
+| `the`          | B-NAME         | 0.96              | 0.99               |
+| `velocity`      | I-NAME         | 0.87              | 0.98               |
+| `v`            | B-VAR          | 0.98              | 0.99               |
 
 *Figure: Predictions Example II*
 </div>
