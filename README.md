@@ -1,4 +1,4 @@
-# Structured Information Retrieval with LLMs
+<img width="481" alt="image" src="https://github.com/user-attachments/assets/b3fff50f-0a40-41d7-92f9-6ac0f5592bd8"># Structured Information Retrieval with LLMs
 
 - **Author(s):** Taissir Boukrouba
 - **Affiliation:** University of Hertfordshire   
@@ -27,6 +27,7 @@
 This project maintains a well-organized directory structure to ensure efficient document control and project management. The `/data` directory contains the final datasets from both iterations of the study. The `/documentation` folder holds comprehensive documentation detailing the methodology and steps undertaken. Saved models are stored in the `/models` directory, while the `/notebooks` folder includes Jupyter notebooks used throughout the project. Finally, the `/scripts` directory has the feature extraction script designed to be executed on a cluster for enhanced performance and time efficiency.
 
 
+<img width="481" alt="image" src="https://github.com/user-attachments/assets/fe307eae-4d21-4ccd-9551-8dd339a74cc8">
 
 ## Project Overview
 
