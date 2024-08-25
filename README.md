@@ -20,7 +20,6 @@
     - [V - Modelling](#v---modelling)
 - [Results](#results)
 - [References](#references)
-- [License](#license)
 
 
 ---
@@ -264,9 +263,6 @@ Both successfully fine-tuned models were tested on a couple of sentences with th
 13. **Ren, Xiaozhe**, Zhou, Pingyi, Meng, Xinfan, Huang, Xinjing, Wang, Yadao, Wang, Weichao, Li, Pengfei, Zhang, Xiaoda, Podolskiy, Alexander, Arshinov, Grigory, Bout, Andrey, Piontkovskaya, Irina, Wei, Jiansheng, Jiang, Xin, Su, Teng, Liu, Qun, Yao, Jun. (2023). *PanGu: Towards Trillion Parameter Language Model with Sparse Heterogeneous Computing*. arXiv (Cornell University). [https://arxiv.org/abs/2303.10845](https://arxiv.org/abs/2303.10845)
 
 14. **Vaswani, Ashish**, Shazeer, Noam, Parmar, Niki, Uszkoreit, Jakob, Jones, Llion, Gomez, Aidan N., Kaiser, Lukasz, Polosukhin, Illia. (2017). *Attention is All You Need*. arXiv (Cornell University). [https://arxiv.org/abs/1706.03762](https://arxiv.org/abs/1706.03762)
-
-
-## License
 
 
 
