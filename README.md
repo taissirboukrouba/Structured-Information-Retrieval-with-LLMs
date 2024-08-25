@@ -43,11 +43,16 @@ This project maintains a well-organized directory structure to ensure efficient 
 </p>
 
 ## Installation
-To ensure efficient use of computational resources and minimize processing time, especially during the resource-intensive feature extraction and modeling phases, it's recommended to utilize the pre-extracted datasets provided in the `/data` directory. By doing so, you can concentrate on running the modeling pipeline, which still demands significant computational power. To get started, follow the instructions below to clone the project and set up your environment for execution.
+To ensure efficient use of computational resources and minimize processing time, especially during the resource-intensive feature extraction and modeling phases, it's recommended to utilize the pre-extracted datasets provided in the `/data` directory. 
+
+By doing so, you can concentrate on running the modeling pipeline, which still demands significant computational power. To get started, follow the instructions below to clone the project and set up your environment for execution.
 
 ```bash
+# clonning repository
 git clone https://github.com/username/project-name.git
+# changing to the project's directory 
 cd Structured-Information-Retrieval-with-LLMs
+# installing the required libraries
 pip install -r requirements.txt
 ```
 ## Computational Environment
