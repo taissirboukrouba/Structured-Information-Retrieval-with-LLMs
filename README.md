@@ -36,25 +36,18 @@ Knowing the importance of research papers and the huge amounts of its unstructur
 - Under [ArXiv’s terms and submission agreements](https://info.arxiv.org/help/policies/submission_agreement.html) “Grant of the License to arXiv” submitters agree that their submission grants us (content users) a non-exclusive, perpetual, irrevocable, and royalty-free license to include and use their work 
 
 ## Document Control
-This project maintains a well-organized directory structure to ensure efficient document control and project management. The `/data` directory contains the final datasets from both iterations of the study. The `/documentation` folder holds comprehensive documentation detailing the methodology and steps undertaken. Saved models are stored in the `/models` directory, while the `/notebooks` folder includes Jupyter notebooks used throughout the project. Finally, the `/scripts` directory has the feature extraction script designed to be executed on a cluster for enhanced performance and time efficiency.
-
+This project maintains a well-organized directory structure to ensure efficient document control and project management. The `/data` directory contains the final datasets from both iterations of the study. The `/documentation` folder holds comprehensive documentation detailing the methodology and steps undertaken. Saved models are stored in the `/models` directory, while the `/notebooks` folder includes Jupyter notebooks used throughout the project. Finally, the `/scripts` directory has the feature extraction script designed to be executed on a cluster for enhanced performance and time efficiency. The library requirements are specified inside `requirements.txt` file.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/b4c6b387-1741-4035-90a1-5c29ca0121f7" alt="doc-cntrl" width="700"/>
+  <img src="https://github.com/user-attachments/assets/784955d5-b0b7-403c-8a53-acc8bdc3dd61" alt="doc-cntrl" width="800"/>
 </p>
 
 ## Installation
-
-Give instructions on how to install and set up your project. This could include:
-- Prerequisites (e.g., Python version, libraries, tools)
-- Cloning the repository
-- Installing dependencies
-- Any other setup steps
+To ensure efficient use of computational resources and minimize processing time, especially during the resource-intensive feature extraction and modeling phases, it's recommended to utilize the pre-extracted datasets provided in the `/data` directory. By doing so, you can concentrate on running the modeling pipeline, which still demands significant computational power. To get started, follow the instructions below to clone the project and set up your environment for execution.
 
 ```bash
-# Example commands
 git clone https://github.com/username/project-name.git
-cd project-name
+cd Structured-Information-Retrieval-with-LLMs
 pip install -r requirements.txt
 ```
 ## Computational Environment
