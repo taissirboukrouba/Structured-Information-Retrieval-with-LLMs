@@ -49,7 +49,7 @@ By doing so, you can concentrate on running the modeling pipeline, which still d
 
 ```bash
 # clonning repository
-git clone https://github.com/username/project-name.git
+git clone https://github.com/taissirboukrouba/Structured-Information-Retrieval-with-LLMs.git
 # changing to the project's directory 
 cd Structured-Information-Retrieval-with-LLMs
 # installing the required libraries
