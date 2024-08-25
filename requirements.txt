@@ -14,7 +14,7 @@ seqeval==1.2.2
 huggingface-hub==0.18.0
 
 # PyTorch for modeling
-torch==2.0.1
+torch==2.2.0
 torchinfo==1.8.0
 
 # Essential libraries
