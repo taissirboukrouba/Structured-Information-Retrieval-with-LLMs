@@ -19,6 +19,7 @@
     - [IV - Feature Extraction](#iv---feature-extraction)
     - [V - Modelling](#v---modelling)
 - [Results](#results)
+- [Models](#models)
 - [References](#references)
 - [License](#license)
 
@@ -235,6 +236,8 @@ Both successfully fine-tuned models were tested on a couple of sentences with th
 
 *Figure: Predictions Example II*
 </div>
+
+## Models 
 
 ## References
 1. **Battiston, Federico**, Musciotto, Federico, Wang, Dashun, Barabási, Albert-László, Szell, Michael, Sinatra, Roberta. (2019). *Taking census of Physics*. Nature Reviews Physics, 1(1), 89--97. [https://doi.org/10.1038/s42254-018-0005-3](https://doi.org/10.1038/s42254-018-0005-3)
