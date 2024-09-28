@@ -8,6 +8,7 @@
 
 ## Table of Contents
 - [Project Overview](#project-overview)
+- [Importance](#importance)
 - [Ethical Considerations](#ethical-considerations)
 - [Document Control](#document-control)
 - [Installation](#installation)
@@ -27,6 +28,11 @@
 ## Project Overview
 
 Knowing the importance of research papers and the huge amounts of its unstructured data that is submitted to the web , makes it a very prominent problem . Significant insights has been left as brute text in these papers that makes it not easily accessible. The aim of this project is to compare the ability of several LLMs  to extract variables and their names from physics research papers. This task is called sequence labelling where a sentence is given and each of its token is categorised into the convenient class. A collection of papers collected from Arxiv ,  an open-access repository for research papers, particularly in the fields of physics, mathematics and computer science. The data is in the format of PDFs which was transformed into text using python PDF to text translation tools. Data preprocessing techniques special for NLP are used to clean the text , which was later put in a feature extraction pipeline using different grammatical tools such as POS and NER  to extract and create a dataframe of variables and their names. The result data which had two iterations (one with 300 rows and the second with 2K rows) is to be trained on two different types of models , one is pre-trained (DistillBERT) and the other is from scratch (Encoder-only Transformer). 
+
+## Importance
+
+This project is of great importance to the physics research community in general and to other specific areas in mathematics as well. If its limits can be overcome , it will simplify and automate my defined procedure for reviewing huge amounts of research papers by summing up the variables, their names and its concepts. This will improve the searchability , access and manipulation of academic data into structured , searchable , filterable databases and research engines. The findings can also facilitate a profound comprehension with the creation of knowledge graphs that plot the relationships between various physics concepts. Also, these findings could improve the educational tools for papers like making automated glossaries of scientific text. Next to last, common fields such as math, engineering and others, can use these trained models , my tokenisers and my generated datasets to allow further applications to be made for related tasks.
+
 
 ## Ethical Considerations 
 - In [Cornel’s University Privacy Principles](https://privacy.cornell.edu/privacy-cornell/privacy-principles-cornell) "Support for US and International Data Privacy Standards" and [ArXiv’s Privacy Policy](https://info.arxiv.org/help/policies/privacy_policy.html)  "Special Notice for EU Residents" sections mention and acknowledge GDPR requirements where they list principles like Notice, Data Integrity, Purpose Limitation, Access, and Security, which corresponds to GDPR rules (creating, maintaining, using or disseminating personal data must take "reasonable and appropriate" security measures)
