@@ -4,6 +4,9 @@
 - **Affiliation:** University of Hertfordshire   
 - **Date:** 08/2024
 
+> [!IMPORTANT]  
+> If you are coming from the research paper and want to go directly to the execution steps, you can do so by clicking [here](#research-installation-guide)
+
 ---
 
 ## Table of Contents
@@ -12,6 +15,8 @@
 - [Ethical Considerations](#ethical-considerations)
 - [Document Control](#document-control)
 - [Installation](#installation)
+    - [General Installation](#general-installation)
+    - [Research Installation Guide](#research-installation-guide)
 - [Computational Environment](#computational-environment)
 - [Methodology](#methodology)
     - [I - Data Collection](#i---data-collection)
@@ -49,6 +54,7 @@ This project maintains a well-organized directory structure to ensure efficient 
 </p>
 
 ## Installation
+### General Installation 
 To ensure efficient use of computational resources and minimize processing time, especially during the resource-intensive feature extraction and modeling phases (which is explained in the next title) , it's recommended to utilize the pre-extracted datasets provided in the `/data` directory. 
 
 By doing so, you can concentrate on running the modeling pipeline, which still demands significant computational power. To get started, follow the instructions below to clone the project and set up your environment for execution.
@@ -61,6 +67,17 @@ cd Structured-Information-Retrieval-with-LLMs
 # installing the required libraries
 pip install -r requirements.txt
 ```
+
+### Research Installation Guide
+> [!NOTE]
+> If​‍​‌‍​‍‌​‍​‌‍​‍‌ you are a reader of the research paper and want to check out this GitHub README, you should consider that all the parts here are the same ones you have already looked through, the only difference being this section that is specially designed to lead researchers through the necessary ​‍​‌‍​‍‌​‍​‌‍​‍‌execution.
+
+This​‍​‌‍​‍‌​‍​‌‍​‍‌ guide emphasizes the fundamental parts that are necessary to reproduce the primary results, thus, this section's reader can concentrate on those parts of the work which contribute the most to the value. A complete run of the pipeline may be very resource-intensive in terms of computation, and the specifics are given in [the next chapter](#computational-environment). Out of all the notebooks that are in the [`/notebooks`](/notebooks/) directory, the one that is mainly needed for executing the brief version of the work is ​‍​‌‍​‍‌​‍​‌‍​‍‌`modelling.ipynb`.
+
+1. The​‍​‌‍​‍‌​‍​‌‍​‍‌ [dataset](/data/) is the very first thing that is required. Two iterations of the data (`df-iter-1` and `df-iter-2`) are mentioned which are quite significant. As this project utilized colab notebooks, Google drive was the best option for storing these datasets. Once you have cloned the project, you can upload these datasets to your google drive which is a way of making the execution of this notebook more efficient and without interruptions. It is better to replace the dataset link with your own in the notebook so that you can be sure that there will be no ​‍​‌‍​‍‌​‍​‌‍​‍‌errors.
+2. This​‍​‌‍​‍‌​‍​‌‍​‍‌ project is dependent on models available on Hugging Face, hence users are required to log in before executing the code. Hugging Face makes use of a User Access Token, which is a one-of-a-kind API key that enables the downloading of models and datasets. Once you have your token, the notebook will ask you to input it when you execute the authentication command. That is how the code gets the permission to use the resources it needs.To make your token, you need to go through the steps given in the manual whose link is provided ​‍​‌‍​‍‌​‍​‌‍​‍‌[here](https://huggingface.co/docs/hub/security-tokens)
+3. After​‍​‌‍​‍‌​‍​‌‍​‍‌ everything is finished, the notebook will basically be running fine with all the graphs and stats displayed. The default GPU of Google Colab might not be good enough for this project so it could be that just [picking a better one](https://colab.research.google.com/github/d2l-ai/d2l-en-colab/blob/master/chapter_appendix-tools-for-deep-learning/selecting-servers-gpus.ipynb) is the way to go to save ​‍​‌‍​‍‌​‍​‌‍​‍‌time.
+
 ## Computational Environment
 
 ### I - Feature Extraction Phase - UHHPC Cluster : 
